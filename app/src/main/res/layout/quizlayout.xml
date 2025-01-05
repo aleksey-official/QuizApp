@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layoutbg"
+    android:layout_gravity="center"
+    android:id="@+id/chagestatuslayout"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textsettingstatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Добавление ответа"
+        android:textColor="#000000"
+        android:textSize="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/textstatussetting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textstatussetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="233dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Ответ"
+        android:textColor="#878787"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/textQuestionquiz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textsettingstatus" />
+
+    <EditText
+        android:id="@+id/textQuestionquiz"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/quizbluebutton"
+        android:ems="10"
+        android:fontFamily="@font/nunito_sans_semibold"
+        android:hint="Ответ"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textstatussetting" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/saveQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/newbgbutton"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Сохранить"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/correct" />
+
+    <Switch
+        android:id="@+id/correct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:thumbTint="#B139E5"
+        android:fontFamily="@font/nunito_sans_semibold"
+        android:text="Верный ответ "
+        android:textSize="17dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textQuestionquiz" />
+</androidx.constraintlayout.widget.ConstraintLayout>

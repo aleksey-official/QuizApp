@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Quiz">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/firstIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:buttonTint="#12d18e"
+                android:fontFamily="@font/nunito_sans_semibold"
+                app:layout_constraintEnd_toEndOf="@+id/firstText"
+                app:layout_constraintTop_toBottomOf="@+id/question" />
+
+            <CheckBox
+                android:id="@+id/secondIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:buttonTint="#12d18e"
+                android:fontFamily="@font/nunito_sans_semibold"
+                app:layout_constraintEnd_toEndOf="@+id/secondText"
+                app:layout_constraintTop_toBottomOf="@+id/question" />
+
+            <CheckBox
+                android:id="@+id/thirdIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:buttonTint="#12d18e"
+                android:fontFamily="@font/nunito_sans_semibold"
+                app:layout_constraintEnd_toEndOf="@+id/thirdText"
+                app:layout_constraintTop_toBottomOf="@+id/firstText" />
+
+            <CheckBox
+                android:id="@+id/fourIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:buttonTint="#12d18e"
+                android:fontFamily="@font/nunito_sans_semibold"
+                app:layout_constraintEnd_toEndOf="@+id/fourText"
+                app:layout_constraintTop_toBottomOf="@+id/secondText" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addButton"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/newbgbutton"
+                android:fontFamily="@font/nunito_bold"
+                android:text="Добавить"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fourText" />
+
+            <EditText
+                android:id="@+id/question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/newtextboxbg"
+                android:ems="10"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:hint="Введите вопрос"
+                android:inputType="textCapSentences | textMultiLine"
+                android:minHeight="75dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="#151522"
+                android:textColorHint="#B5B5B5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/newbgbuttonround"
+                android:fontFamily="@font/nunito_bold"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="10 сек."
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toStartOf="@+id/point"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textImage" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/secondText"
+                android:layout_width="175dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/quizbluebutton"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="Добавьте ответ"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/firstText"
+                app:layout_constraintTop_toBottomOf="@+id/secondIcon" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/fourText"
+                android:layout_width="175dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/quizredbutton"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="Добавьте ответ"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/thirdText"
+                app:layout_constraintTop_toBottomOf="@+id/fourIcon" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/firstText"
+                android:layout_width="175dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/quizgreenbutton"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="Добавьте ответ"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/secondText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstIcon" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/thirdText"
+                android:layout_width="175dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/quizorangebutton"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="Добавьте ответ"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/fourText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/thirdIcon" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/point"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/newbgbuttonround"
+                android:fontFamily="@font/nunito_bold"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="500"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/time"
+                app:layout_constraintTop_toBottomOf="@+id/textImage" />
+
+            <TextView
+                android:id="@+id/textImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/nunito_bold"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Загрузите фото для вопроса (необязательно)"
+                android:textColor="#4E4E4E"
+                android:textSize="17dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageQuestion" />
+
+            <ImageView
+                android:id="@+id/imageQuestion"
+                android:layout_width="250dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="32dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerCrop"
+                android:src="@drawable/load"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/backIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/backicon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

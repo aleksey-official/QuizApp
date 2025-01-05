@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/registrationlayout"
+    tools:context=".quizPreview">
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/play_solo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:animateLayoutChanges="true"
+                android:animationCache="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/question_view"
+                app:shimmer_repeat_mode="restart"
+                app:shimmer_shape="radial">
+
+                <!--For shimmer we are creating a same
+                    layout but setting its background
+                    as a gray colour and not providing
+                    any view inside it-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <!--below we are displaying multiple
+                        shimmer layouts using include
+                        to show them in list format-->
+                    <include layout="@layout/item_container_event_question_shim" />
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/question_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:padding="20dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/count_question_text" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/subscribe"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/newbgbuttonround"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="Подписаться"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="@+id/developer_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/developer_image"
+                app:layout_constraintVertical_bias="0.32" />
+
+            <TextView
+                android:id="@+id/count_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="50dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="?"
+                android:textColor="#151522"
+                android:textSize="25dp"
+                app:layout_constraintEnd_toStartOf="@+id/count_play"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+            <TextView
+                android:id="@+id/count_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="?"
+                android:textColor="#151522"
+                android:textSize="25dp"
+                app:layout_constraintEnd_toStartOf="@+id/count_like"
+                app:layout_constraintStart_toEndOf="@+id/count_question"
+                app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+            <TextView
+                android:id="@+id/count_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="?"
+                android:textColor="#151522"
+                android:textSize="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/count_play"
+                app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+            <TextView
+                android:id="@+id/email3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:text="Вопросов"
+                android:textColor="#B5B5B5"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/count_question"
+                app:layout_constraintStart_toStartOf="@+id/count_question"
+                app:layout_constraintTop_toBottomOf="@+id/count_question" />
+
+            <TextView
+                android:id="@+id/email6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:text="Раз сыграно"
+                android:textColor="#B5B5B5"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/count_play"
+                app:layout_constraintStart_toStartOf="@+id/count_play"
+                app:layout_constraintTop_toBottomOf="@+id/count_play" />
+
+            <TextView
+                android:id="@+id/email7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:text="Лайк-(ов)"
+                android:textColor="#B5B5B5"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/count_like"
+                app:layout_constraintStart_toStartOf="@+id/count_like"
+                app:layout_constraintTop_toBottomOf="@+id/count_like" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#EFEFEF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email6" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#EFEFEF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name_quiz" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/quizPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/back_image">
+
+                <ImageView
+                    android:id="@+id/imageQuiz"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/emptyimage" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/name_quiz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="Загрузка названия..."
+                android:textColor="#151522"
+                android:textSize="23dp"
+                app:layout_constraintStart_toStartOf="@+id/quizPhoto"
+                app:layout_constraintTop_toBottomOf="@+id/quizPhoto" />
+
+
+            <TextView
+                android:id="@+id/welcome11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="Описание"
+                android:textColor="#151522"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="@+id/quizPhoto"
+                app:layout_constraintTop_toBottomOf="@+id/developer_image" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:text="Загрузка описания..."
+                android:textColor="#151522"
+                android:textSize="17dp"
+                app:layout_constraintStart_toStartOf="@+id/quizPhoto"
+                app:layout_constraintTop_toBottomOf="@+id/welcome11" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/developer_image"
+                android:layout_width="57dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/emoji_icon"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="@+id/quizPhoto"
+                app:layout_constraintTop_toBottomOf="@+id/view3"
+                app:riv_oval="true" />
+
+            <TextView
+                android:id="@+id/developer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/nunito_bold"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Имя"
+                android:textColor="#181A1F"
+                android:textSize="15dp"
+                app:layout_constraintStart_toEndOf="@+id/developer_image"
+                app:layout_constraintTop_toTopOf="@+id/developer_image" />
+
+            <TextView
+                android:id="@+id/developer_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:text="email@mail.ru"
+                android:textColor="#B5B5B5"
+                android:textSize="17dp"
+                app:layout_constraintStart_toEndOf="@+id/developer_image"
+                app:layout_constraintTop_toBottomOf="@+id/developer_name" />
+
+            <TextView
+                android:id="@+id/count_question_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="Вопросов"
+                android:textColor="#151522"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="@+id/quizPhoto"
+                app:layout_constraintTop_toBottomOf="@+id/description" />
+
+            <ImageView
+                android:id="@+id/back_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/backicon" />
+
+            <ImageView
+                android:id="@+id/like"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/quizPhoto"
+                app:srcCompat="@drawable/likeoutline"
+                android:tag="likeOutline"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/play_solo"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/newbgbuttonsupport"
+        android:fontFamily="@font/nunito_bold"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:text="Одиночная игра"
+        android:textAllCaps="false"
+        android:textColor="#B139E5"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/play_with_friends"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/play_with_friends"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/newbgbutton"
+        android:fontFamily="@font/nunito_bold"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:text="Играть с друзьями"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/play_solo" />
+</androidx.constraintlayout.widget.ConstraintLayout>

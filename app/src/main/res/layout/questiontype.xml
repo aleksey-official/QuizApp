@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layoutbg"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/welcome3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Квиз"
+        android:textColor="#151522"
+        android:textSize="13dp"
+        app:layout_constraintEnd_toEndOf="@+id/quizQuestion"
+        app:layout_constraintStart_toStartOf="@+id/quizQuestion"
+        app:layout_constraintTop_toBottomOf="@+id/quizQuestion" />
+
+    <TextView
+        android:id="@+id/welcome10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Несколько"
+        android:textColor="#151522"
+        android:textSize="13dp"
+        app:layout_constraintEnd_toEndOf="@+id/checkboxQuestion"
+        app:layout_constraintStart_toStartOf="@+id/checkboxQuestion"
+        app:layout_constraintTop_toBottomOf="@+id/checkboxQuestion" />
+
+    <TextView
+        android:id="@+id/welcome6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Текстовый"
+        android:textColor="#151522"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/textQuestion"
+        app:layout_constraintStart_toStartOf="@+id/textQuestion"
+        app:layout_constraintTop_toBottomOf="@+id/textQuestion" />
+
+    <TextView
+        android:id="@+id/welcome5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Правда или ложь"
+        android:textColor="#151522"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/trueorfalseQuestion"
+        app:layout_constraintStart_toStartOf="@+id/trueorfalseQuestion"
+        app:layout_constraintTop_toBottomOf="@+id/trueorfalseQuestion" />
+
+    <TextView
+        android:id="@+id/textsettingstatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nunito_bold"
+        android:gravity="center"
+        android:text="Добавление вопроса"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/quizQuestion"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/layoutbgnew"
+        app:layout_constraintEnd_toStartOf="@+id/trueorfalseQuestion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textsettingstatus"
+        app:srcCompat="@drawable/quizicon" />
+
+    <ImageButton
+        android:id="@+id/trueorfalseQuestion"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/layoutbgnew"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/quizQuestion"
+        app:layout_constraintTop_toBottomOf="@+id/textsettingstatus"
+        app:srcCompat="@drawable/trueorfalseicon" />
+
+    <ImageButton
+        android:id="@+id/textQuestion"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/layoutbgnew"
+        app:layout_constraintEnd_toStartOf="@+id/checkboxQuestion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome3"
+        app:srcCompat="@drawable/typingicon" />
+
+    <ImageButton
+        android:id="@+id/checkboxQuestion"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/layoutbgnew"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textQuestion"
+        app:layout_constraintTop_toBottomOf="@+id/welcome5"
+        app:srcCompat="@drawable/checkboxicon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

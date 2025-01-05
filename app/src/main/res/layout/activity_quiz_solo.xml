@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".quiz_solo">
+
+    <TextView
+        android:id="@+id/loadingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Загрузка..."
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="135dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <ProgressBar
+        android:id="@+id/loadingBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:indeterminateTint="#FCECFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loadingText" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:background="#7e62ff"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/pointGettext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Заработано:"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:textSize="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/name_quiz3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/layoutbg"
+        android:fontFamily="@font/nunito_bold"
+        android:paddingLeft="7dp"
+        android:paddingTop="7dp"
+        android:paddingRight="7dp"
+        android:paddingBottom="7dp"
+        android:text="Баллы"
+        android:visibility="gone"
+        android:textColor="#12d18e"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/name_quiz2"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/name_quiz2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Верно!"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:textSize="27dp"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toEndOf="@+id/pointGettext"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nextQuestionButton2"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/layoutbg"
+        android:fontFamily="@font/nunito_bold"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:visibility="gone"
+        android:paddingBottom="10dp"
+        android:text="Дальше"
+        android:textAllCaps="false"
+        android:textColor="#7e62ff"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_quiz2" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_quiz3" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/question_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scorePanel" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scorePanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="#FFFFFF"
+            app:layout_constraintTop_toBottomOf="@+id/welcome2" />
+
+        <TextView
+            android:id="@+id/welcome2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="Табло"
+            android:textColor="@color/white"
+            android:textSize="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

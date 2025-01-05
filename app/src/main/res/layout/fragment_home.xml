@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Home">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:animationCache="true"
+                app:layout_constraintBottom_toBottomOf="@+id/question_view"
+                app:layout_constraintTop_toTopOf="@+id/question_view"
+                app:shimmer_repeat_mode="restart"
+                app:shimmer_shape="radial">
+
+                <!--For shimmer we are creating a same
+                    layout but setting its background
+                    as a gray colour and not providing
+                    any view inside it-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <!--below we are displaying multiple
+                        shimmer layouts using include
+                        to show them in list format-->
+                    <include layout="@layout/item_container_card_shim" />
+
+                    <include layout="@layout/item_container_card_shim" />
+
+                    <include layout="@layout/item_container_card_shim" />
+
+                    <include layout="@layout/item_container_card_shim" />
+
+                    <include layout="@layout/item_container_card_shim" />
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayoutPopular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:animationCache="true"
+                app:layout_constraintBottom_toBottomOf="@+id/questionView"
+                app:layout_constraintTop_toTopOf="@+id/questionView"
+                app:shimmer_repeat_mode="restart"
+                app:shimmer_shape="radial">
+
+                <!--For shimmer we are creating a same
+                    layout but setting its background
+                    as a gray colour and not providing
+                    any view inside it-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <!--below we are displaying multiple
+                        shimmer layouts using include
+                        to show them in list format-->
+                    <include layout="@layout/item_container_card_shim" />
+
+                    <include layout="@layout/item_container_card_shim" />
+
+                    <include layout="@layout/item_container_card_shim" />
+
+                    <include layout="@layout/item_container_card_shim" />
+
+                    <include layout="@layout/item_container_card_shim" />
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayoutPeople"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:animationCache="true"
+                app:layout_constraintBottom_toBottomOf="@+id/autor"
+                app:layout_constraintTop_toTopOf="@+id/autor"
+                app:shimmer_repeat_mode="restart"
+                app:shimmer_shape="radial">
+
+                <!--For shimmer we are creating a same
+                    layout but setting its background
+                    as a gray colour and not providing
+                    any view inside it-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <!--below we are displaying multiple
+                        shimmer layouts using include
+                        to show them in list format-->
+                    <include layout="@layout/item_container_people_shim" />
+
+                    <include layout="@layout/item_container_people_shim" />
+
+                    <include layout="@layout/item_container_people_shim" />
+
+                    <include layout="@layout/item_container_people_shim" />
+
+                    <include layout="@layout/item_container_people_shim" />
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardCornerRadius="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/roundedImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bghome" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/autor"
+                android:layout_width="match_parent"
+                android:layout_height="215dp"
+                android:layout_marginTop="16dp"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/welcome8" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/question_view"
+                android:layout_width="match_parent"
+                android:layout_height="215dp"
+                android:layout_marginTop="16dp"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/welcome7" />
+
+            <TextView
+                android:id="@+id/discoverAll2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:drawableRight="@drawable/righticon"
+                android:fontFamily="@font/nunito_bold"
+                android:text="Смотреть все"
+                android:textColor="#B139E5"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/welcome7" />
+
+            <TextView
+                android:id="@+id/autorAll2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:drawableRight="@drawable/righticon"
+                android:fontFamily="@font/nunito_bold"
+                android:text="Смотреть все"
+                android:textColor="#B139E5"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/welcome8" />
+
+            <TextView
+                android:id="@+id/popularAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:drawableRight="@drawable/righticon"
+                android:fontFamily="@font/nunito_bold"
+                android:text="Смотреть все"
+                android:textColor="#B139E5"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/welcome9" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/questionView"
+                android:layout_width="match_parent"
+                android:layout_height="215dp"
+                android:layout_marginTop="16dp"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/welcome9" />
+
+            <TextView
+                android:id="@+id/welcome7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="Исследуй"
+                android:textColor="#151522"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+            <TextView
+                android:id="@+id/welcome8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="Лучшие авторы"
+                android:textColor="#151522"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/questionView" />
+
+            <TextView
+                android:id="@+id/welcome9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="Популярные"
+                android:textColor="#151522"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/question_view" />
+
+            <ImageView
+                android:id="@+id/noImage"
+                android:layout_width="0dp"
+                android:layout_height="175dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/noresult"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/welcome7" />
+
+            <ImageView
+                android:id="@+id/noImage2"
+                android:layout_width="0dp"
+                android:layout_height="175dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/noresult"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/welcome9" />
+
+            <ImageView
+                android:id="@+id/noImage3"
+                android:layout_width="0dp"
+                android:layout_height="175dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/noresult"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/welcome8" />
+
+            <TextView
+                android:id="@+id/noText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_bold"
+                android:gravity="center"
+                android:text="Здесь пока ничего нет, но скоро будет интересно!"
+                android:textColor="#4E4E4E"
+                android:visibility="invisible"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/noImage"
+                app:layout_constraintStart_toStartOf="@+id/noImage"
+                app:layout_constraintTop_toBottomOf="@+id/noImage" />
+
+            <TextView
+                android:id="@+id/noText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_bold"
+                android:gravity="center"
+                android:text="Здесь пока ничего нет, но скоро будет интересно!"
+                android:textColor="#4E4E4E"
+                android:textSize="15dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/noImage"
+                app:layout_constraintStart_toStartOf="@+id/noImage"
+                app:layout_constraintTop_toBottomOf="@+id/noImage2" />
+
+            <TextView
+                android:id="@+id/noText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_bold"
+                android:gravity="center"
+                android:text="Здесь пока ничего нет, но скоро будет интересно!"
+                android:textColor="#4E4E4E"
+                android:textSize="15dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/noImage"
+                app:layout_constraintStart_toStartOf="@+id/noImage"
+                app:layout_constraintTop_toBottomOf="@+id/noImage3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

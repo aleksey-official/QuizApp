@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable-v24/cardbgnew.xml" value="0.1815" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable-v24/correct.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable-v24/dividernewquiz.xml" value="0.1635" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable-v24/dividernewйгшя.xml" value="0.1635" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable-v24/edit_icon.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable-v24/emoji_icon.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable-v24/greenbutton.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable-v24/layoutbgnew.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable-v24/navbg.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable-v24/newbgbutton.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable-v24/newbgbuttonsupport.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable-v24/newtextboxbg.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable-v24/questionLayout.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable-v24/question_layout.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable-v24/quizbluebutton.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable-v24/quizgreenbutton.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable-v24/quizorangebutton.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable-v24/quizredbutton.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable-v24/redbutton.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable-v24/splashscreen.xml" value="0.1715" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable-v24/uncorrect.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable/animate_fragment.xml" value="0.1665" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable/backicon.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable/bg.xml" value="0.2545" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable/bgempty.xml" value="0.1815" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable/bgfile.xml" value="0.1815" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable/delicon.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable/divider.xml" value="0.234" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable/dividernew.xml" value="0.1815" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable/emoji_icon.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable/exitbutton.xml" value="0.251" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable/graybutton.xml" value="0.2555" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable/imagebgresourse.xml" value="0.1815" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable/layoutbg.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable/likefill.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable/likeoutline.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable/loading.xml" value="0.2555" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable/newbgbutton.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable/newbgbuttonround.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable/newbgbuttonкщгтв.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable/publicicon.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable/righticon.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable/search.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable/shimbg.xml" value="0.2095" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable/textbg.xml" value="0.235" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/drawable/textboxbg.xml" value="0.234" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/activity_checkbox_quiz.xml" value="0.14285714285714285" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/activity_on_boarding.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/activity_phonereg.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/activity_quiz.xml" value="0.152" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/activity_quiz_friend.xml" value="0.2" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/activity_quiz_friend_user.xml" value="0.25" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/activity_quiz_preview.xml" value="0.16883116883116883" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/activity_quiz_question.xml" value="0.18857142857142858" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/activity_quiz_questions.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/activity_quiz_solo.xml" value="0.152" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/activity_registration.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/activity_search.xml" value="0.25" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/activity_see_all.xml" value="0.25" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/activity_splash_screen.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/activity_true_or_false.xml" value="0.2857142857142857" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/activity_typing_quiz.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/activity_user_preview.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/activity_user_profile.xml" value="0.20192307692307693" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/changebirhtday.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/changenamelayout.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/changenicklayout.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/changestatuslayout.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/correctlayout.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/delaccdonelayout.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/delacclayout.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/exitlayout.xml" value="0.25" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/fragment_create.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/fragment_home.xml" value="0.136" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/fragment_join.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/fragment_library.xml" value="0.18857142857142858" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/fragment_my_favoirite.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/fragment_my_library.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/fragment_play_checkbox.xml" value="0.168" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/fragment_play_quiz.xml" value="0.23137254901960785" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/fragment_play_true_or_false.xml" value="0.176" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/fragment_play_typing.xml" value="0.23137254901960785" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/fragment_profile.xml" value="0.2857142857142857" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/fragment_search_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/intro_one.xml" value="0.22402597402597402" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/intro_three.xml" value="0.2857142857142857" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/intro_two.xml" value="0.18857142857142858" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/item_container_card.xml" value="0.2807570977917981" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/item_container_card_shim.xml" value="0.14285714285714285" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/item_container_event.xml" value="0.3828571428571429" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/item_container_event_question.xml" value="0.2" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/item_container_event_question_shim.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/item_container_event_shim.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/item_container_people.xml" value="0.6285714285714287" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/item_container_people_card.xml" value="0.2" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/item_container_people_quiz_add.xml" value="0.419773095623987" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/item_container_people_score.xml" value="0.25" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/item_container_people_score_shim.xml" value="0.25" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/item_container_people_shim.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/item_container_quiz.xml" value="0.42857142857142855" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/item_container_quiz_shim.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/item_container_solo.xml" value="0.25" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/login.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/pointlayout.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/questionType.xml" value="0.42857142857142855" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/questiontype.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/quizlayout.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/start_quiz_layout.xml" value="0.25" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/supportlayout.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/timeLayout.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/timelayout.xml" value="0.2857142857142857" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/layout/uncorrectlayout.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/menu/bottom_bar.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/pit1-/quiz/app/src/main/res/menu/bottom_bar_employer.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

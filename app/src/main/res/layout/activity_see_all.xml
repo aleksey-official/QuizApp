@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".see_all">
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/search" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:animationCache="true"
+        app:layout_constraintTop_toTopOf="@+id/question_view"
+        app:shimmer_repeat_mode="restart"
+        app:shimmer_shape="radial">
+
+        <!--For shimmer we are creating a same
+            layout but setting its background
+            as a gray colour and not providing
+            any view inside it-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--below we are displaying multiple
+                shimmer layouts using include
+                to show them in list format-->
+            <include layout="@layout/item_container_quiz_shim" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <ImageView
+        android:id="@+id/noImage4"
+        android:layout_width="0dp"
+        android:layout_height="175dp"
+        android:layout_marginTop="16dp"
+        android:visibility="invisible"
+        android:src="@drawable/noresult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typeText" />
+
+    <TextView
+        android:id="@+id/noText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_bold"
+        android:gravity="center"
+        android:text="Здесь пока ничего нет, но
+         скоро будет интересно!"
+        android:visibility="invisible"
+        android:textColor="#4E4E4E"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noImage4" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/question_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typeText" />
+
+    <TextView
+        android:id="@+id/typeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Все квизы"
+        android:textColor="#151522"
+        android:textSize="23dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backicon" />
+</androidx.constraintlayout.widget.ConstraintLayout>

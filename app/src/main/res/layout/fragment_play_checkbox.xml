@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".playCheckbox">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/firstIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:buttonTint="#12d18e"
+                android:fontFamily="@font/nunito_sans_semibold"
+                app:layout_constraintEnd_toEndOf="@+id/firstText"
+                app:layout_constraintTop_toBottomOf="@+id/question" />
+
+            <CheckBox
+                android:id="@+id/thirdIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:buttonTint="#12d18e"
+                android:fontFamily="@font/nunito_sans_semibold"
+                app:layout_constraintEnd_toEndOf="@+id/thirdText"
+                app:layout_constraintTop_toBottomOf="@+id/secondText" />
+
+            <CheckBox
+                android:id="@+id/secondIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:buttonTint="#12d18e"
+                android:fontFamily="@font/nunito_sans_semibold"
+                app:layout_constraintEnd_toEndOf="@+id/secondText"
+                app:layout_constraintTop_toBottomOf="@+id/firstText" />
+
+            <CheckBox
+                android:id="@+id/fourIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:buttonTint="#12d18e"
+                android:fontFamily="@font/nunito_sans_semibold"
+                app:layout_constraintEnd_toEndOf="@+id/fourText"
+                app:layout_constraintTop_toBottomOf="@+id/thirdText" />
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/newtextboxbg"
+                android:ems="10"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:gravity="center"
+                android:hint="Загрузка..."
+                android:inputType="textCapSentences | textMultiLine"
+                android:minHeight="75dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="#151522"
+                android:textColorHint="#B5B5B5"
+                android:textSize="17dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point" />
+
+            <TextView
+                android:id="@+id/select_done"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:visibility="gone"
+                android:background="@drawable/quizgreenbutton"
+                android:fontFamily="@font/nunito_bold"
+                android:gravity="center"
+                android:paddingLeft="7dp"
+                android:paddingTop="7dp"
+                android:paddingRight="7dp"
+                android:paddingBottom="7dp"
+                android:text="Выбор сделан. Ожидаем ответы остальных участников"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/question" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/newbgbuttonround"
+                android:fontFamily="@font/nunito_bold"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="10 сек."
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toStartOf="@+id/point"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageQuestion" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/secondText"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/quizbluebutton"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="Загрузка..."
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/secondIcon" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/fourText"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/quizredbutton"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="Загрузка..."
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fourIcon" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/firstText"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/quizgreenbutton"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="Загрузка..."
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstIcon" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/thirdText"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/quizorangebutton"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="Загрузка..."
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.53"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/thirdIcon" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/point"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/newbgbuttonround"
+                android:fontFamily="@font/nunito_bold"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="500"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/time"
+                app:layout_constraintTop_toBottomOf="@+id/imageQuestion" />
+
+            <ImageView
+                android:id="@+id/imageQuestion"
+                android:layout_width="250dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="32dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerCrop"
+                android:src="@drawable/emptyimage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/correctPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/quizgreenbutton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/name_quiz2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="Верно!"
+                    android:textColor="@color/white"
+                    android:textSize="27dp"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView11"
+                    app:layout_constraintStart_toStartOf="@+id/imageView11"
+                    app:layout_constraintTop_toTopOf="@+id/imageView11" />
+
+                <TextView
+                    android:id="@+id/name_quiz3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/layoutbg"
+                    android:fontFamily="@font/nunito_bold"
+                    android:paddingLeft="7dp"
+                    android:paddingTop="7dp"
+                    android:paddingRight="7dp"
+                    android:paddingBottom="7dp"
+                    android:text="Баллы"
+                    android:textColor="#12d18e"
+                    android:textSize="20dp"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView11"
+                    app:layout_constraintHorizontal_bias="0.501"
+                    app:layout_constraintStart_toStartOf="@+id/imageView11"
+                    app:layout_constraintTop_toBottomOf="@+id/name_quiz2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/uncorrectPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView111"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/quizredbutton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/name_quiz21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="Неверно!"
+                    android:textColor="@color/white"
+                    android:textSize="27dp"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView111"
+                    app:layout_constraintStart_toStartOf="@+id/imageView111"
+                    app:layout_constraintTop_toTopOf="@+id/imageView111" />
+
+                <TextView
+                    android:id="@+id/name_quiz31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/layoutbg"
+                    android:fontFamily="@font/nunito_bold"
+                    android:paddingLeft="7dp"
+                    android:paddingTop="7dp"
+                    android:paddingRight="7dp"
+                    android:paddingBottom="7dp"
+                    android:text="Это было близко"
+                    android:textColor="#E53939"
+                    android:textSize="20dp"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView111"
+                    app:layout_constraintHorizontal_bias="0.501"
+                    app:layout_constraintStart_toStartOf="@+id/imageView111"
+                    app:layout_constraintTop_toBottomOf="@+id/name_quiz21" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nextQuestionButton"
+            android:layout_width="0dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/newbgbutton"
+            android:fontFamily="@font/nunito_bold"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="Дальше"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addButton"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/newbgbutton"
+            android:fontFamily="@font/nunito_bold"
+            android:text="Ответить"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:background="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

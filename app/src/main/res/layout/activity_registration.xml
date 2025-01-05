@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/registrationlayout"
+    tools:context=".registration">
+
+    <TextView
+        android:id="@+id/name_quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="113dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Создание аккаунта"
+        android:textColor="#151522"
+        android:textSize="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="129dp"
+        android:fontFamily="@font/nunito_sans_semibold"
+        android:text="Заполните свой профиль"
+        android:textColor="#999999"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_quiz" />
+
+
+    <EditText
+        android:id="@+id/nameQuiz"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/newtextboxbg"
+        android:ems="10"
+        android:hint="Почта"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#151522"
+        android:textColorHint="#575758"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image" />
+
+    <EditText
+        android:id="@+id/pasText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/newtextboxbg"
+        android:ems="10"
+        android:hint="Пароль"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#151522"
+        android:textColorHint="#575758"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameQuiz" />
+
+    <EditText
+        android:id="@+id/confpasText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/newtextboxbg"
+        android:ems="10"
+        android:hint="Повтори пароль"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#151522"
+        android:textColorHint="#575758"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pasText" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/play_solo"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/newbgbutton"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Создать"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+    <ProgressBar
+        android:id="@+id/progBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:visibility="invisible"
+        android:indeterminateTint="#7339E5"
+        app:layout_constraintBottom_toBottomOf="@+id/play_solo"
+        app:layout_constraintEnd_toEndOf="@+id/play_solo"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/play_solo"
+        app:layout_constraintTop_toTopOf="@+id/play_solo"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/image"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/emoji_icon"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:riv_oval="true" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/edit_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintEnd_toEndOf="@+id/image" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="#B139E5"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:textColor="#575758"
+        android:checked="true"
+        android:fontFamily="@font/nunito_sans_semibold"
+        android:text="Публичный профиль"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confpasText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

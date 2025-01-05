@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".user_preview">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back_image_click"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/backicon" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:animationCache="true"
+                app:layout_constraintTop_toTopOf="@+id/question_view"
+                app:shimmer_repeat_mode="restart"
+                app:shimmer_shape="radial">
+
+                <!--For shimmer we are creating a same
+                    layout but setting its background
+                    as a gray colour and not providing
+                    any view inside it-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <!--below we are displaying multiple
+                        shimmer layouts using include
+                        to show them in list format-->
+                    <include layout="@layout/item_container_quiz_shim" />
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/question_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:padding="20dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/quizNumber" />
+
+            <TextView
+                android:id="@+id/quizNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="0 квиз-(ов)"
+                android:textColor="#151522"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/editProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/newbgbuttonround"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="Подписаться"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="@+id/profilePhoto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/profilePhoto"
+                app:layout_constraintVertical_bias="0.32" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardCornerRadius="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/back_image_click">
+
+                <ImageView
+                    android:id="@+id/roundedImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/profile_bg" />
+            </androidx.cardview.widget.CardView>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/profilePhoto"
+                android:layout_width="57dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/emoji_icon"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView"
+                app:riv_oval="true" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="Имя"
+                android:textColor="#151522"
+                android:textSize="20dp"
+                app:layout_constraintStart_toEndOf="@+id/profilePhoto"
+                app:layout_constraintTop_toTopOf="@+id/profilePhoto" />
+
+            <TextView
+                android:id="@+id/quizCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="50dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="0"
+                android:textColor="#151522"
+                android:textSize="25dp"
+                app:layout_constraintEnd_toStartOf="@+id/followers"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <TextView
+                android:id="@+id/followers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="0"
+                android:textColor="#151522"
+                android:textSize="25dp"
+                app:layout_constraintEnd_toStartOf="@+id/following"
+                app:layout_constraintStart_toEndOf="@+id/quizCount"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <TextView
+                android:id="@+id/following"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="0"
+                android:textColor="#151522"
+                android:textSize="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/followers"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:text="email@mail.ru"
+                android:textColor="#B5B5B5"
+                android:textSize="17dp"
+                app:layout_constraintStart_toEndOf="@+id/profilePhoto"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+
+            <TextView
+                android:id="@+id/email2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:text="Квиз-(ов)"
+                android:textColor="#B5B5B5"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/quizCount"
+                app:layout_constraintStart_toStartOf="@+id/quizCount"
+                app:layout_constraintTop_toBottomOf="@+id/quizCount" />
+
+            <TextView
+                android:id="@+id/email4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:text="Подписчиков"
+                android:textColor="#B5B5B5"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/followers"
+                app:layout_constraintStart_toStartOf="@+id/followers"
+                app:layout_constraintTop_toBottomOf="@+id/followers" />
+
+            <TextView
+                android:id="@+id/email5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:text="Подписок"
+                android:textColor="#B5B5B5"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/following"
+                app:layout_constraintStart_toStartOf="@+id/following"
+                app:layout_constraintTop_toBottomOf="@+id/following" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#EFEFEF"
+                app:layout_constraintTop_toBottomOf="@+id/profilePhoto" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#EFEFEF"
+                app:layout_constraintTop_toBottomOf="@+id/email4" />
+
+            <ImageView
+                android:id="@+id/noImage"
+                android:layout_width="0dp"
+                android:layout_height="175dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/noresult"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/quizNumber" />
+
+            <TextView
+                android:id="@+id/noText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_bold"
+                android:gravity="center"
+                android:text="Здесь пока ничего нет, но скоро будет интересно!"
+                android:textColor="#4E4E4E"
+                android:textSize="15dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/noImage"
+                app:layout_constraintStart_toStartOf="@+id/noImage"
+                app:layout_constraintTop_toBottomOf="@+id/noImage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
